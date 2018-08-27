@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tutorial JavaScript -> BARRA DE ESTADO</title>
+	<script type="text/javascript">
+		var sc1 = function(){
+			alert('Mouse over');
+		}
+		var sc2 = function(){
+			//alert('Hello ' + document.form1.txtNombre.value);
+			sc3();
+		};
+
+		var sc3 = function(){
+			if(document.form1.txtEmail.value.indexOf('@')==-1)
+				alert('Correo invalido');
+		} 
+		function abrirVentana() {
+			var propiedades = 'menubar=no,width=300,height=300,status=yes,resizable=no';
+			var ventana = window.open("","MsgWindow",propiedades);
+			var codigo = '<HTML><HEAD><TITLE>Página de prueba</TITLE></HEAD><BODY>';
+			codigo += '<H3>Esto es muy útil para desplegar publicidad</H3><br>';
+			codigo += '<H3>O para desplegar algún cartel de aviso</H3><br>';
+			codigo += '<H3>O para lo que se te ocurra</H3><br>';
+			codigo += '<form><center>';
+			codigo += '<input type=button value=Cerrar onClick="window.close(self)">';
+			codigo += '</center></form></BODY></HTML>';
+			ventana.document.write(codigo);
+		}
+
+
+	</script>
+</head>
+<body  onLoad="window.defaultStatus='Hola, yo soy la barra de estado.';">
+	<center>
+		<h2>Mire en la barra de estado</h2>
+		<form name="form1">
+			<input type="" name="txtNombre">
+			<input type="" name="txtEmail">
+
+			<a href="" onmouseover="sc2();">ASD</a>
+			<input type=button value=Cerrar onClick="window.close(self); abrirVentana();">
+			<input type=button value="Ventana de ads" onClick="abrirVentana();">
+			<input type=button value="Cambiar Ventana de ads" onClick="cambiarVentana();">
+		</form>
+	</center>
+</body>
+</html>

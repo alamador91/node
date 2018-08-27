@@ -1,0 +1,21 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "A weather App v1 (https://codeburst.io/build-a-weather-website-in-30-minutes-with-node-js-express-openweather-a317f904897b) v2 (https://codeburst.io/build-a-simple-weather-app-with-node-js-in-just-16-lines-of-code-32261690901d)",
+  "main": "weather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node weather1.js"
+  },
+  "keywords": [
+    "weather"
+  ],
+  "author": "@cheL",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "request": "^2.88.0",
+    "yargs": "^12.0.1"
+  }
+}

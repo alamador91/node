@@ -1,0 +1,29 @@
+{
+  "name": "web2",
+  "version": "1.0.0",
+  "description": "Una prueba del npm init",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "echo": "echo lalalala",
+    "build-css": "stylus source/stylesheets/index.styl -o static/css",
+    "watch-css": "stylus source/stylesheets/index.styl -o static/css -w",
+    "clean": "rm -rf static\\css &amp;&amp; mkdir -p static\\css",
+    "build": "npm run clean &amp;&amp; npm run build-css",
+    "watch": "npm run clean &amp;&amp; npm run watch-css &amp; nodemon server -e js,jade",
+    "start2": "node server"
+  },
+  "keywords": [
+    "prueba",
+    "init"
+  ],
+  "author": "AcheL",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "jade": "^1.11.0",
+    "morgan": "^1.9.0",
+    "stylus": "^0.54.5"
+  }
+}
